@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Drain Unblocking</title>
+    <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/browser-image-compression@2.0.2/dist/browser-image-compression.js"></script>
+</head>
+<body>
+    <div class="site-wrapper reveal-on-scroll">
+
+        <header>
+            <a href="./" class="logo-container">
+                <img src="static/logo-1024.png">
+            </a>
+            <div class="header-nav">
+                <a href="./">Home</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </header>
+        <main>
+            <section class="contact-title">
+                <h1>Contact Us</h1>
+                <p class="subheadline-bold">For immediate assistance with an emergency, please call us directly on <span><a href="tel:0871234567">087 123 4567</a></span></p>
+                <p class="subheadline">
+                    Reach out for general inquiries, or include photos of your issue for a quick estimate.
+                </p>
+            </section>
+            <div class="horizontal-fade"></div>
+            <section class="contact-section">
+                <div class="form-wrapper">
+                    <form id="requestForm">
+                        <div class="left-column">
+                            <input type="text" placeholder="Name" name="name" autocomplete="off">
+                            <input type="tel" placeholder="Mobile number*" name="phone_number">
+                            <input type="text" placeholder="Area / Location" name="area">
+                            <input type="text" name="subject" maxlength="100" autocomplete="off" tabindex="-1">
+                            <textarea maxlength="1000" placeholder="Your message&#10;Briefly describe the work required" name="message" rows="4"></textarea>
+                        </div>
+                        <div class="right-column">
+                            <div class="upload-container">
+                                <div class="upload-trigger" id="uploadTrigger">
+                                    <input type="file" id="fileInput" multiple accept="image/*" hidden>
+                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#7a7a7a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                                        <circle cx="12" cy="13" r="4"></circle>
+                                    </svg>
+                                    <span class="upload-title">Upload up to 8 images</span>
+                                    <span class="upload-text">max 10MB per image</span>
+                                    <span class="upload-text">JPEG, PNG, WebP, GIF, AVIF </span>
+                                    <span class="upload-status" id="uploadStatus">No image selected</span>
+                                </div>
+                                <div class="image-previews" id="imagePreviews">
+                                    
+                                </div>
+                            </div>
+                            <p>* Required</p>
+                            <button type="submit" class="submit-btn">
+                                <div id="submit-spinner" class="absolute loading-spinner-container spinner">
+                                    <div class="spinner-border show-spinner" role="status">
+                                        <span hidden>Loading...</span>
+                                    </div>
+                                </div>
+                                <p>Send</p>
+                            </button>
+                        </div>
+                    </form>
+                    
+                </div>
+            </section>
+        </main>
+        <div id="fullscreen-spinner" class="fixed loading-spinner-container spinner show">
+            <div class="spinner-border show-spinner" role="status">
+                <span hidden>Loading...</span>
+            </div>
+        </div>
+    </div>
+<script src="script.min.js"></script>
+<script src="loader.min.js"></script>
+</body>
+</html>
